@@ -4,7 +4,6 @@
 
 .header-conteiner {
   position: absolute;
-  overflow: hidden;
   padding-top: 8px;
 
   @include tab {
@@ -16,6 +15,7 @@
 }
 
 .header__bar {
+  z-index: 2;
   display: flex;
   position: relative;
   align-items: center;
@@ -39,7 +39,7 @@
     }
 
     .header__nav-link {
-      color: var(--accent-color);
+      color: var(--text-white-color);
 
       &:hover,
       &:focus {
