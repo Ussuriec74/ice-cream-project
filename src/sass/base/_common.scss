@@ -1,62 +1,62 @@
-body{
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
 }
 
-a, button, .pointer{
-    cursor: pointer;
+a,
+button,
+details,
+.pointer {
+  cursor: pointer;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
-.link {
-    text-decoration: none;
-}
-
-.current{
-    color: var(--current-color-active-link);
-}
-
-container-desk{
-  max-width: 1280px;
-  padding-left: 115px;
-  padding-right: 115px;
+.container {
+  width: 100%;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include tel {
+    width: 480px;
+  }
+
+  @include tab {
+    width: 768px;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  @include desk {
+    width: 1280px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
-container-tab{
-    min-width: 320px;
-    max-width: 480px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0 auto;
-}
-conteiner-mob{
-    max-width: 1280px;
-    padding-left: 115px;
-    padding-right: 115px;
-    margin: 0 auto;
+.current {
+  color: var(--accent-color);
 }
 
 .visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }

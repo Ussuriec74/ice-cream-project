@@ -1,131 +1,144 @@
 .gallery {
-    background: linear-gradient(180deg, rgb(355, 245, 246) 40%, rgb(255, 255, 255) 40%, rgb(255, 255, 255) 100%);
+  background: linear-gradient(
+    180deg,
+    rgb(355, 245, 246) 40%,
+    rgb(255, 255, 255) 40%,
+    rgb(255, 255, 255) 100%
+  );
 
-    @media screen and (min-width: 768px) {
-        background: linear-gradient(180deg, rgb(255, 245, 246) 40%, rgb(255, 255, 255) 40%, rgb(255, 255, 255) 100%);
-    }
+  @media screen and (min-width: 768px) {
+    background: linear-gradient(
+      180deg,
+      rgb(255, 245, 246) 40%,
+      rgb(255, 255, 255) 40%,
+      rgb(255, 255, 255) 100%
+    );
+  }
 
-    @media screen and (min-width: 1200px) {
-        background: linear-gradient(180deg, rgb(255, 245, 246) 40%, rgb(255, 255, 255) 40%, rgb(255, 255, 255) 100%);
-    }
+  @media screen and (min-width: 1200px) {
+    background: linear-gradient(
+      180deg,
+      rgb(255, 245, 246) 40%,
+      rgb(255, 255, 255) 40%,
+      rgb(255, 255, 255) 100%
+    );
+  }
 }
 
 .gallery img {
-    min-width: 40px;
-    min-height: 40px;
+  min-width: 40px;
+  min-height: 40px;
 
-    @include tab {
-        width: 83px;
-        height: 83px;
-    }
+  @include tab {
+    width: 83px;
+    height: 83px;
+  }
 
-    @include desk {
-        width: 140px;
-        height: 140px;
-    }
+  @include desk {
+    width: 140px;
+    height: 140px;
+  }
 
-    border-radius: 10px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14),
+  border-radius: 10px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-    transition-property: transform;
-    
-    &:hover {
-        transform: scale(1.5);
-        transition-duration: 500ms;
-    }
-}
- 
-.gallery .large img {
-    min-width: 84px;
-    min-height: 84px;
+  transition: transform;
 
-    @include tab {
-        width: 172px;
-        height: 172px;
-    }
-    
-    @include desk {
-        width: 290px;
-        height: 290px;
-    }
+  &:hover {
+    transform: scale(1.5);
+    transition-duration: 500ms;
+  }
+}
+
+.gallery .large img {
+  min-width: 84px;
+  min-height: 84px;
+
+  @include tab {
+    width: 172px;
+    height: 172px;
+  }
+
+  @include desk {
+    width: 290px;
+    height: 290px;
+  }
 }
 
 .gallery__flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .gallery__column:not(:last-child) {
-    margin-right: 4px;
-    
-    @include tab {
-        margin-right: 6px;
-    }
-    @include desk {
-        margin-right: 7px;
-    }
-    
+  margin-right: 4px;
+
+  @include tab {
+    margin-right: 6px;
+  }
+  @include desk {
+    margin-right: 7px;
+  }
 }
 
 .gallery__column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .gallery__picture + .gallery__picture {
-    margin-top: 4px;
-    
-    @include tab {
-        margin-top: 6px;
-    }
-    
-    @include desk {
-        margin-top: 7px;
-    }
+  margin-top: 4px;
+
+  @include tab {
+    margin-top: 6px;
+  }
+
+  @include desk {
+    margin-top: 7px;
+  }
 }
 
 .gallery__column:nth-child(2) {
-    margin-top: 10px;
+  margin-top: 10px;
 
-    @include tab {
-        margin-top: 15px;
-    }
-    
-    @include desk {
-        margin-top: 20px;
-    }
+  @include tab {
+    margin-top: 15px;
+  }
+
+  @include desk {
+    margin-top: 20px;
+  }
 }
 
 .gallery__column:nth-child(4) {
-    margin-top: 20px;
-    
-    @include tab {
-        margin-top: 30px;
-    }
-    
-    @include desk {
-        margin-top: 40px;
-    }
+  margin-top: 20px;
+
+  @include tab {
+    margin-top: 30px;
+  }
+
+  @include desk {
+    margin-top: 40px;
+  }
 }
 
 .gallery__column:nth-child(5) {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    @include tab {
-        margin-bottom: 30px;
-    }
-    
-    @include desk {
-        margin-bottom: 40px;
-    }
+  @include tab {
+    margin-bottom: 30px;
+  }
+
+  @include desk {
+    margin-bottom: 40px;
+  }
 }
 
 .gallery__column:nth-child(6) {
-    margin-top: 5px;
+  margin-top: 5px;
 
-    @include tab {
-        margin-bottom: 10px;
-    }
+  @include tab {
+    margin-bottom: 10px;
+  }
 }

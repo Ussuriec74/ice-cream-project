@@ -1,0 +1,41 @@
+.header__bar {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 6px;
+
+  @include tab {
+    padding-top: 38px;
+  }
+}
+
+.header__nav-list {
+  display: none;
+
+  @include desk {
+    font-family: 'DM Sans';
+    @include font(700, 16px, 21px, 0.04em);
+    display: flex;
+
+    .header__nav-item {
+      margin-right: 35px;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    .header__nav-link {
+      color: var(--accent-color);
+
+      &:hover,
+      &:focus {
+        color: var(--current-color-active-link);
+      }
+    }
+    .current {
+      color: var(--current-color-active-link);
+    }
+  }
+}
