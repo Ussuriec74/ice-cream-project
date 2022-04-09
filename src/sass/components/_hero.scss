@@ -1,9 +1,17 @@
-.header-hero {
+.hero {
   background-color: #ffb8ca;
 }
 
-.container-hero {
+.hero__container {
   position: relative;
+  padding-top: 194px;
+  padding-bottom: 158px;
+  @include tab {
+    padding-top: 102px;
+  }
+  @include desk {
+    padding-top: 148px;
+  }
   @media screen and (min-width: 320px) {
     height: 502px;
     background-image: url(../images/header-and-hero/icecream-mob.png),
@@ -89,177 +97,34 @@
   }
 }
 
-.header__nav-item {
-  transition: transform var(--trans-time) var(--cubic);
-  transform: scale(1);
-
-  &:hover,
-  &:focus {
-    transform: scale(1.04);
-  }
-}
-
-.burger-menu {
-  @media screen and (min-width: 320px) {
-    display: block;
-    position: absolute;
-    display: block;
-    width: 20px;
-    height: 12px;
-    top: 25px;
-    right: 0px;
-    padding: 0;
-    border: none;
-    background: transparent;
-  }
-  &:focus,
-  &:hover {
-    background-color: #ffa5ba;
-  }
-
-  @media screen and (min-width: 480px) {
-    display: block;
-    position: absolute;
-    display: block;
-    width: 20px;
-    height: 12px;
-    top: 25px;
-    right: 0px;
-    padding: 0;
-    border: none;
-    background: transparent;
-  }
-
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    display: block;
-    width: 20px;
-    height: 12px;
-    top: 52px;
-    right: 190px;
-    padding: 0;
-    border: none;
-    background: transparent;
-  }
-
-  @media screen and (min-width: 1280px) {
-    display: none;
-  }
-}
-
-.btn-header {
-  @media screen and (min-width: 320px) {
-    display: none;
-  }
-
-  @media screen and (min-width: 480px) {
-    display: none;
-  }
-
-  @media screen and (min-width: 768px) {
-    display: block;
-    @include font(700, 16px, 21px, 0.04em);
-    width: 159px;
-    height: 44px;
-    padding: 11px 37px;
-    border-radius: 22px;
-    cursor: pointer;
-    text-align: start;
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 6px;
-      height: 10px;
-      top: 18px;
-      left: 118px;
-      background-image: url(../images/header-and-hero/vector.png);
-      background-repeat: no-repeat;
-    }
-  }
-
-  @media screen and (min-width: 1280px) {
-    @include font(700, 16px, 21px, 0.04em);
-    width: 159px;
-    height: 44px;
-    padding: 11px 37px;
-    border-radius: 22px;
-    cursor: pointer;
-    text-align: start;
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 6px;
-      height: 10px;
-      top: 17px;
-      left: 118px;
-      background-image: url(../images/header-and-hero/vector.png);
-      background-repeat: no-repeat;
-    }
-  }
-}
-
 .hero__theme {
-  @media screen and (min-width: 320px) {
-    width: 218px;
-    font-family: 'Titan One';
-    @include font(400, 26px, 30px, 0.04em);
-    color: var(--btn-light-bg-color);
-    margin-top: 137px;
-    text-transform: uppercase;
+  width: 218px;
+  font-family: 'Titan One';
+  @include font(400, 26px, 30px, 0.04em);
+  color: var(--btn-light-bg-color);
+  text-transform: uppercase;
 
-    .colorized {
-      font-family: 'Titan One';
-      @include font(400, 48px, 46px, 0.04em);
-      color: var(--btn-dark-bg-color);
-    }
+  .colorized {
+    font-family: 'Titan One';
+    @include font(400, 48px, 46px, 0.04em);
+    color: var(--btn-dark-bg-color);
   }
 
-  @media screen and (min-width: 480px) {
-    width: 218px;
-    font-family: 'Titan One';
-    @include font(400, 26px, 30px, 0.04em);
-    color: var(--btn-light-bg-color);
-    margin-top: 137px;
-    text-transform: uppercase;
-
-    .colorized {
-      font-family: 'Titan One';
-      @include font(400, 48px, 46px, 0.04em);
-      color: var(--btn-dark-bg-color);
-    }
-  }
-
-  @media screen and (min-width: 768px) {
+  @include tab {
     width: 162px;
-    font-family: 'Titan One';
     @include font(400, 22px, 25px, 0.04em);
-    color: var(--btn-light-bg-color);
-    margin-top: 15px;
-    text-transform: uppercase;
 
     .colorized {
-      font-family: 'Titan One';
       @include font(400, 34px, 31px, 0.04em);
-      color: var(--btn-dark-bg-color);
     }
   }
 
-  @media screen and (min-width: 1280px) {
+  @include desk {
     width: 277px;
-    font-family: 'Titan One';
     @include font(400, 38px, 44px, 0.04em);
-    color: var(--btn-light-bg-color);
-    margin-top: 60px;
-    text-transform: uppercase;
 
     .colorized {
-      font-family: 'Titan One';
       @include font(400, 58px, 52px, 0.04em);
-      color: var(--btn-dark-bg-color);
     }
   }
 
@@ -447,82 +312,6 @@
       height: 24px;
       margin-bottom: 15px;
     }
-  }
-}
-
-.mob-menu__container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateX(120%);
-  transition: transform 250ms linear;
-  width: 250px;
-  height: 100vh;
-
-  background-color: #e17992;
-
-  box-shadow: -8px 0 20px rgba(0, 0, 0, 0.25);
-
-  &.is-open {
-    transform: translateX(0);
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 254px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    display: none;
-  }
-  &.is-open {
-    display: block;
-  }
-}
-
-.mob-menu__btn {
-  height: 44px;
-  width: 209px;
-  border: none;
-  border-radius: 22px;
-  padding: 0 17px;
-
-  @include font(700, 16px, 21px, 0.04em);
-  @include flex-center;
-
-  margin: 60px auto 32px;
-
-  @media screen and (min-width: 768px) {
-    width: 186px;
-  }
-}
-
-.mob-menu__list {
-  margin-left: 21px;
-}
-
-.mob-menu__item:not(:last-child) {
-  margin-bottom: 22px;
-}
-
-.mob-menu__link {
-  @include font(700, 14px, 18px, 0.04em);
-  color: #ffffff;
-}
-
-.mob-menu__link.current {
-  color: #d41443;
-}
-.mob-menu-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border: none;
-  background-color: transparent;
-  fill: #ffffff;
-  font-size: 20px;
-  &:focus,
-  &:hover {
-    fill: var(--accent-color);
   }
 }
 
